@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小肠疝气全面科普指南，涵盖小肠疝气的成因、症状、分型、非手术治疗与腹腔镜微创手术方案，以及术后康复护理与预防复发的实用建议。">
+    <meta name="keywords" content="小肠疝气, 腹股沟疝, 腹腔镜手术, 疝气治疗, 腹壁外科">
+    <title>小肠疝气-科学诊疗与康复护理全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-light: #e6f0fa;
+            --accent-color: #28a745;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --spacing-xl: 64px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #004494;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+        }
+
+        /* Alert Banner */
+        .alert-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ffeeba;
+        }
+
+        /* Content Sections */
+        section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        /* What is it */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .text-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-dark);
+        }
+
+        .text-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-gray);
+        }
+
+        .icon-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            color: var(--text-gray);
+        }
+
+        .icon-list li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .image-placeholder {
+            background-color: #e9ecef;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Symptoms Grid */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .symptom-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .symptom-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+
+        .symptom-card h4 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+
+        .symptom-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Treatment Comparison */
+        .treatment-wrapper {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+        }
+
+        .treatment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-md);
+            background: var(--white);
+        }
+
+        .treatment-table th, .treatment-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .treatment-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .treatment-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--white);
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 16px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        .faq-content {
+            padding: 16px;
+            border-top: 1px solid #eee;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 0.85rem;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none; /* Simplified for static page */
+            }
+            
+            .treatment-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        ⚠️ 重要提示：本页面内容仅供科普参考，不能替代专业医生的诊断与治疗建议。如出现剧烈疼痛或嵌顿症状，请立即就医。
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <span>⚕️</span> 小肠疝气诊疗指南
+            </div>
+            <nav class="nav-menu">
+                <a href="#what-is">什么是疝气</a>
+                <a href="#symptoms">常见症状</a>
+                <a href="#treatment">治疗方案</a>
+                <a href="#prevention">预防护理</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#treatment" class="btn btn-primary">预约咨询</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>科学认识小肠疝气<br>微创解决腹壁难题</h1>
+            <p>小肠疝气是腹壁强度降低与腹内压力增高共同作用的结果。了解成因、症状与手术指征，是恢复健康的第一步。</p>
+            <div class="hero-actions">
+                <a href="#what-is" class="btn btn-primary">了解病因</a>
+                <a href="#treatment" class="btn btn-outline">查看手术方案</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is It Section -->
+    <section id="what-is">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content">
+                    <h3>什么是小肠疝气？</h3>
+                    <p>小肠疝气，医学上称为腹股沟疝或腹壁疝，是指腹腔内的脏器或组织，通过腹壁薄弱点或缺损处，向体表突出，在局部形成包块。</p>
+                    <p>最常见的是<strong>腹股沟疝</strong>，男性多于女性。小肠作为突出的脏器之一，当它通过疝环进入疝囊后，若不能回纳，可能发生<strong>嵌顿</strong>或<strong>绞窄</strong>，这是一种急腹症，需要紧急处理。</p>
+                    <ul class="icon-list">
+                        <li><strong>腹壁薄弱：</strong> 先天性发育不良、肌肉萎缩或手术切口愈合不良。</li>
+                        <li><strong>腹内压力增高：</strong> 长期咳嗽、便秘、排尿困难、重体力劳动等。</li>
+                    </ul>
+                </div>
+                <div class="image-placeholder">
+                    <!-- Generic medical illustration placeholder -->
+                    <img src="https://picsum.photos/seed/medical_hernia/600/400" alt="小肠疝气解剖示意图" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms Section -->
+    <section id="symptoms">
+        <div class="container">
+            <div class="section-title">
+                <h2>如何判断是否患有疝气？</h2>
+                <p>关注身体发出的信号，早期发现，早期干预</p>
+            </div>
+            <div class="symptoms-grid">
+                <article class="symptom-card">
+                    <div class="symptom-icon">📦</div>
+                    <h4>腹股沟包块</h4>
+                    <p>站立、行走或咳嗽时，腹股沟区出现可复性肿块。平卧或用手推挤后可消失。</p>
+                </article>
+                <article class="symptom-card">
+                    <div class="symptom-icon">😣</div>
+                    <h4>坠胀疼痛</h4>
+                    <p>肿块增大时，可能伴有下坠感、酸胀或隐痛。久站或劳累后症状加重。</p>
+                </article>
+                <article class="symptom-card">
+                    <div class="symptom-icon">🚫</div>
+                    <h4>嵌顿症状</h4>
+                    <p>肿块突然出现且<strong>无法回纳</strong>，伴有剧烈疼痛、恶心呕吐，这是急症征兆。</p>
+                </article>
+                <article class="symptom-card">
+                    <div class="symptom-icon">🔔</div>
+                    <h4>阴囊肿大</h4>
+                    <p>男性患者若为斜疝，肿块可能进入阴囊，导致阴囊肿胀不适。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Section -->
+    <section id="treatment">
+        <div class="container">
+            <div class="section-title">
+                <h2>主流治疗方案对比</h2>
+                <p>选择最适合您的手术方式，告别复发困扰</p>
+            </div>
+            <div class="treatment-wrapper">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3>手术是治疗小肠疝气的唯一有效手段</h3>
+                </div>
+                <table class="treatment-table">
+                    <thead>
+                        <tr>
+                            <th>治疗方式</th>
+                            <th>腹腔镜手术</th>
+                            <th>无张力修补术</th>
+                            <th>传统高张力修补</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>创伤程度</strong></td>
+                            <td>微小（3个孔）</td>
+                            <td>较小（切口约3-5cm）</td>
+                            <td>较大（需开放切口）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>恢复速度</strong></td>
+                            <td>快，术后24小时可下床</td>
+                            <td>较快，3-5天出院</td>
+                            <td>慢，需住院5-7天</td>
+                        </tr>
+                        <tr>
+                            <td><strong>复发率</strong></td>
+                            <td>低（约1-2%）</td>
+                            <td>低</td>
+                            <td>较高（5-10%）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>适用人群</strong></td>
+                            <td>绝大多数成年人，美观要求高者</td>
+                            <td>常规腹股沟疝</td>
+                            <td>复发疝或特殊病例</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 30px; text-align: center;">
+                    <p style="margin-bottom: 15px; color: var(--text-gray);">💡 专家建议：对于小肠疝气，现代医学首选微创或无张力修补，以减少术后疼痛并降低复发风险。</p>
+                    <a href="#" class="btn btn-primary">咨询专家手术方案</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention & Care Section -->
+    <section id="prevention">
+        <div class="container">
+            <div class="section-title">
+                <h2>术后康复与日常预防</h2>
+                <p>科学的护理是预防复发的关键</p>
+            </div>
+            <div class="content-grid">
+                <div class="text-content">
+                    <h3>术后注意事项</h3>
+                    <ul class="icon-list">
+                        <li><strong>避免用力：</strong> 术后早期避免剧烈咳嗽、提重物、便秘等增加腹压的行为。</li>
+                        <li><strong>控制排便：</strong> 保持大便通畅，必要时遵医嘱使用通便药物，防止腹压过高。</li>
+                        <li><strong>适度活动：</strong> 术后早期下床活动有助于肠道功能恢复，但需避免剧烈运动。</li>
+                        <li><strong>定期复查：</strong> 按照医生约定时间进行复查，观察修补部位愈合情况。</li>
+                    </ul>
+                </div>
+                <div class="text-content">
+                    <h3>日常预防措施</h3>
+                    <ul class="icon-list">
+                        <li><strong>增强腹肌：</strong> 适度进行平板支撑、仰卧起坐等运动，增强腹壁力量。</li>
+                        <li><strong>戒烟限酒：</strong> 吸烟会降低组织愈合能力，增加疝气复发风险。</li>
+                        <li><strong>控制体重：</strong> 肥胖会增加腹内压力，保持健康体重有助于减少发病。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于小肠疝气的疑问，这里都有答案</p>
+            </div>
+            <div class="faq-container">
+                <details>
+                    <summary>小肠疝气不疼需要治疗吗？</summary>
+                    <div class="faq-content">
+                        即使不疼痛，也应考虑治疗。疝气包块会逐渐增大，且存在嵌顿风险。一旦发生嵌顿，可能引发肠管坏死等严重并发症。建议在身体状况允许的情况下尽早手术。
+                    </div>
+                </details>
+                <details>
+                    <summary>老年人做疝气手术风险大吗？</summary>
+                    <div class="faq-content">
+                        老年人因常伴有慢性病（如高血压、糖尿病），手术风险相对较高。但现代微创技术已非常成熟，且手术时间短、恢复快。关键在于术前评估心肺功能，并在麻醉科和外科医生共同监护下进行。
+                    </div>
+                </details>
+                <details>
+                    <summary>微创手术和传统手术哪个好？</summary>
+                    <div class="faq-content">
+                        这取决于具体情况。微创手术创伤小、恢复快、美观，是目前的主流选择。传统手术虽然切口大，但在某些复杂疝气或腹腔镜设备受限的情况下，依然具有不可替代的优势。请咨询专业医生制定方案。
+                    </div>
+                </details>
+                <details>
+                    <summary>疝气手术会复发吗？</summary>
+                    <div class="faq-content">
+                        随着无张力修补材料和腹腔镜技术的普及，复发率已大幅降低。只要严格遵医嘱进行术后护理，避免腹压增高，复发的可能性很低。
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>致力于提供权威、科学的医疗健康科普内容，帮助患者建立正确的健康认知，科学就医。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#what-is">什么是疝气</a></li>
+                        <li><a href="#symptoms">症状识别</a></li>
+                        <li><a href="#treatment">手术方案</a></li>
+                        <li><a href="#faq">患者问答</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>免责声明</h4>
+                    <p style="font-size: 0.9rem;">本网站内容仅供参考，不能作为诊断或治疗依据。医疗决策请务必咨询专业医生。</p>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>&copy; 2023 小肠疝气诊疗指南科普站. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
