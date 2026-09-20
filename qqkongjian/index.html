@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qq空间免费音乐播放器 - QQ空间背景音乐代码生成与在线播放工具</title>
+    <meta name="description" content="提供QQ空间免费音乐播放器代码生成、在线试听、皮肤DIY及音乐代码修改教程。解决QQ空间无法播放、播放器消失、背景音乐自动播放等问题，打造个性空间。">
+    <meta name="keywords" content="qq空间免费音乐播放器,QQ空间背景音乐,空间播放器代码,免费音乐代码,QQ空间音乐DIY">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0084ff;
+            --secondary-color: #0056b3;
+            --accent-color: #ff5000;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #0084ff 0%, #00c6ff 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 主要内容区 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* 侧边栏工具 */
+        aside {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        aside h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .tool-group {
+            margin-bottom: 20px;
+        }
+
+        .tool-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .tool-group input, .tool-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .tool-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .action-btn {
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .action-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* 内容区域 */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* 栏目标题 */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-header h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* 推荐列表 */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .music-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 140px;
+            background: #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .music-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            color: white;
+            font-size: 40px;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-artist {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .card-actions {
+            margin-top: auto;
+        }
+
+        .btn-sm {
+            padding: 6px 15px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* 教程文章 */
+        .article-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* 代码预览区 */
+        .code-box {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .code-label {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 10px;
+            color: #888;
+        }
+
+        /* 页脚 */
+        footer {
+            background: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* 提示框 */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            z-index: 1000;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#0084ff"/>
+                    </svg>
+                    <span>QzoneMusic</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">播放器代码</a></li>
+                    <li><a href="#">背景音乐库</a></li>
+                    <li><a href="#">DIY教程</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>打造专属你的 QQ 空间免费音乐播放器</h1>
+            <p>无需复杂代码，在线生成 QQ 空间背景音乐代码，自定义播放器样式，让你的空间瞬间充满个性与氛围。</p>
+            <a href="#generator" class="btn btn-primary">立即生成播放器</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-content">
+            <!-- 侧边栏：生成工具 -->
+            <aside id="generator">
+                <h3>播放器代码生成器</h3>
+                <div class="tool-group">
+                    <label for="musicUrl">音乐链接 (MP3/WAV)</label>
+                    <input type="text" id="musicUrl" placeholder="粘贴MP3链接地址...">
+                </div>
+                <div class="tool-group">
+                    <label for="playerSkin">播放器皮肤</label>
+                    <select id="playerSkin">
+                        <option value="classic">经典蓝白</option>
+                        <option value="dark">暗夜黑金</option>
+                        <option value="pink">樱花粉嫩</option>
+                        <option value="tech">科技极客</option>
+                    </select>
+                </div>
+                <div class="tool-group">
+                    <label for="autoplay">自动播放</label>
+                    <select id="autoplay">
+                        <option value="1">开启</option>
+                        <option value="0">关闭</option>
+                    </select>
+                </div>
+                <button class="action-btn" onclick="generateCode()">生成代码</button>
+                
+                <div style="margin-top: 20px; border-top: 1px dashed #eee; padding-top: 20px;">
+                    <label style="font-size: 13px; color: #666;">生成结果预览：</label>
+                    <div class="code-box" id="codeOutput">
+                        <span class="code-label">HTML/CSS</span>
+                        <!-- 默认占位 -->
+                        &lt;!-- 点击生成代码 --&gt;
+                    </div>
+                    <button class="action-btn" style="margin-top: 10px; background: #28a745;" onclick="copyCode()">复制代码</button>
+                </div>
+            </aside>
+
+            <!-- 主内容区 -->
+            <div class="content-area">
+                <!-- 推荐音乐 -->
+                <section>
+                    <div class="section-header">
+                        <h2>热门推荐音乐</h2>
+                        <a href="#" style="font-size: 14px; color: var(--primary-color); text-decoration: none;">查看更多 &rarr;</a>
+                    </div>
+                    <div class="music-grid">
+                        <article class="music-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/music1/300/200" alt="音乐封面">
+                                <div class="play-overlay">
+                                    <span class="play-icon">▶</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">晴天</h3>
+                                <p class="card-artist">周杰伦</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline" onclick="useMusic('晴天', '周杰伦', 'https://picsum.photos/seed/music1/300/200')">使用此音乐</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="music-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/music2/300/200" alt="音乐封面">
+                                <div class="play-overlay">
+                                    <span class="play-icon">▶</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">稻香</h3>
+                                <p class="card-artist">周杰伦</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline" onclick="useMusic('稻香', '周杰伦', 'https://picsum.photos/seed/music2/300/200')">使用此音乐</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="music-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/music3/300/200" alt="音乐封面">
+                                <div class="play-overlay">
+                                    <span class="play-icon">▶</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">小幸运</h3>
+                                <p class="card-artist">田馥甄</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline" onclick="useMusic('小幸运', '田馥甄', 'https://picsum.photos/seed/music3/300/200')">使用此音乐</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="music-card">
+                            <div class="card-img">
+                                <img src="https://picsum.photos/seed/music4/300/200" alt="音乐封面">
+                                <div class="play-overlay">
+                                    <span class="play-icon">▶</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">起风了</h3>
+                                <p class="card-artist">买辣椒也用券</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-sm btn-outline" onclick="useMusic('起风了', '买辣椒也用券', 'https://picsum.photos/seed/music4/300/200')">使用此音乐</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 教程文章 -->
+                <section>
+                    <div class="section-header">
+                        <h2>操作指南与教程</h2>
+                    </div>
+                    <article class="article-card">
+                        <h3 class="article-title">如何将生成的代码添加到QQ空间？</h3>
+                        <p class="article-excerpt">获取代码后，进入QQ空间个人中心，找到“装扮空间”或“自定义”选项，选择“添加模块”中的“新建模块” -> “图文模块”，将生成的HTML代码粘贴进去即可。</p>
+                        <a href="#" class="read-more">阅读详细步骤 &rarr;</a>
+                    </article>
+                    <article class="article-card">
+                        <h3 class="article-title">QQ空间免费音乐播放器常见问题解答</h3>
+                        <p class="article-excerpt">很多用户反映播放器不显示或无法播放。这通常是因为代码中的音乐链接失效或被防盗链保护。建议使用本站提供的可靠MP3链接或上传至支持外链的云存储。</p>
+                        <a href="#" class="read-more">查看常见问题 &rarr;</a>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">隐私政策</a>
+                <a href="#">联系合作</a>
+            </div>
+            <p class="copyright">Copyright &copy; 2023 QzoneMusic. 专注于QQ空间音乐DIY服务。</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">代码已复制到剪贴板！</div>
+
+    <script>
+        // 生成代码逻辑
+        function generateCode() {
+            const url = document.getElementById('musicUrl').value;
+            const skin = document.getElementById('playerSkin').value;
+            const autoplay = document.getElementById('autoplay').value;
+
+            if (!url) {
+                showToast('请输入有效的音乐链接地址');
+                return;
+            }
+
+            // 模拟生成代码
+            let css = '';
+            let html = '';
+
+            // 根据皮肤选择不同的样式类
+            let skinClass = '';
+            switch(skin) {
+                case 'dark': skinClass = 'skin-dark'; break;
+                case 'pink': skinClass = 'skin-pink'; break;
+                case 'tech': skinClass = 'skin-tech'; break;
+                default: skinClass = 'skin-classic';
+            }
+
+            // 简单的CSS模拟
+            css = `
+<style>
+    .qm-player { width: 300px; height: 60px; background: linear-gradient(90deg, #0084ff, #00c6ff); border-radius: 30px; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .qm-player .icon { margin-right: 8px; font-size: 18px; }
+    .qm-player .info { display: flex; flex-direction: column; }
+    .qm-player .song { font-weight: bold; }
+    .qm-player .artist { font-size: 10px; opacity: 0.8; }
+    .qm-player .controls { margin-left: 10px; }
+    .qm-player button { background: none; border: none; color: white; cursor: pointer; font-size: 16px; }
+</style>
+`;
+
+            // 简单的HTML模拟
+            html = `
+<div class="qm-player ${skinClass}">
+    <div class="icon">♪</div>
+    <div class="info">
+        <span class="song">正在播放音乐...</span>
+        <span class="artist">QQ音乐播放器</span>
+    </div>
+    <div class="controls">
+        <button>▶</button>
+    </div>
+    <!-- 模拟音频 -->
+    <audio src="${url}" controls style="display:none;"></audio>
+</div>
+`;
+
+            document.getElementById('codeOutput').innerHTML = css + html;
+            showToast('代码生成成功！');
+        }
+
+        // 复制代码逻辑
+        function copyCode() {
+            const codeBox = document.getElementById('codeOutput');
+            const text = codeBox.innerText; // 获取纯文本
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('代码已复制到剪贴板！');
+            }).catch(err => {
+                showToast('复制失败，请手动复制');
+            });
+        }
+
+        // 使用推荐音乐
+        function useMusic(title, artist, img) {
+            // 这里只是模拟交互，实际应用中应填充到输入框
+            document.getElementById('musicUrl').value = "https://example.com/music/" + title + ".mp3";
+            showToast(`已选择：${title} - ${artist}`);
+        }
+
+        // 显示提示框
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
